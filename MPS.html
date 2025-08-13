@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario de contacto validado.</title>
 </head>
 <body>
+    <form id="contactForm" onsubmit="return validarformulario()">
+        <h2>Contáctame.</h2>
+
+        <label for="Nombre:">Nombre:</label><br>
+        <input type="text" id="Nombre" name="Nombre" required><br>
+
+        <label for="Email">Correo Electronico:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="Telefono">Teléfono:</label><br>
+        <input type="tel" id="telefono" name="telefono" pattern="\d{10,}" required><br>
+        <small>Debe contener por lo menos 10 dígitos.</small><br><br>
+
+        <label for="Mnesaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" minlength="10" required rows="5" cols="30"></textarea><br>
+        <small>Escribe al menos 15 caracteres.</small><br><br>
+
+        <button type="submit">ENVIAR</button>
+    </form>
     
 </body>
 </html>
